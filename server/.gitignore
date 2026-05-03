@@ -3,3 +3,11 @@ node_modules
 .env
 
 /generated/prisma
+
+netlify/
+netlify.toml
+*.log
+a.js
+b.js
+test-hoist.js
+test-hoist.ts

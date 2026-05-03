@@ -1,6 +1,12 @@
 {
   "name": "syntgpt",
   "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "admins"
+  ],
   "dependencies": {
     "adm-zip": "^0.5.16",
     "archiver": "^7.0.1",
