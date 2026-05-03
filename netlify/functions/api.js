@@ -9,9 +9,11 @@ async function getHandler() {
 
   // Try multiple paths to find the app.js
   const possiblePaths = [
+    // Preferred: bundled into the function directory at build time
+    './server/dist/app.js',
+    path.join(__dirname, 'server/dist/app.js'),
     '../../server/dist/app.js',
     '../server/dist/app.js',
-    './server/dist/app.js',
     path.join(__dirname, '../../server/dist/app.js'),
     path.join(__dirname, '../server/dist/app.js'),
     path.join(process.cwd(), 'server/dist/app.js'),

@@ -1,5 +1,5 @@
 [build]
-  command = "npm --prefix server run postinstall && npm --prefix server run build && npm --prefix client run build"
+  command = "npm --prefix server run postinstall && npm --prefix server run build && node -e \"const fs=require('fs');const path=require('path');const src=path.join('server','dist');const dst=path.join('netlify','functions','server','dist');fs.rmSync(path.join('netlify','functions','server'),{recursive:true,force:true});fs.mkdirSync(path.dirname(dst),{recursive:true});fs.cpSync(src,dst,{recursive:true});\" && npm --prefix client run build"
   publish = "client/dist"
   functions = "netlify/functions"
 
